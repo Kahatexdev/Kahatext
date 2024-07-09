@@ -5,4 +5,5 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->get('/', 'AuthController::index');
+$routes->get('/verify', 'AuthController::verify');
