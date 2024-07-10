@@ -20,12 +20,18 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
                     <h2 class="heading-section">Kaha.text</h2>
+                    
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
                         <h3 class="mb-4 text-center">Realtime Texting Apps</h3>
+                        <?php if (session()->getFlashdata('error')): ?>
+        <div style="color: red;">
+            <?= session()->getFlashdata('error') ?>
+        </div>
+    <?php endif; ?>
                         <form action="<?= base_url('verify')?>" method="post" class="signin-form">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="username" placeholder="Username" required>
