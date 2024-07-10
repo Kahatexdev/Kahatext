@@ -9,6 +9,10 @@ class AdminController extends BaseController
 {
     public function index()
     {
-        return view('admin/index');
+        $role= session()->get('role');
+        $data = [
+            'role'=>$role
+        ];
+        return view($role.'/index',$data);
     }
 }
